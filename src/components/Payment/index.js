@@ -17,8 +17,8 @@ function Payment() {
   const [error, setError] = useState(null);
 
   const [disabled, setDisabled] = useState(true);
-  const [succeeded, setSucceeded] = useState(true);
-  const [processing, setProcessing] = useState(true);
+  const [succeeded, setSucceeded] = useState(false);
+  const [processing, setProcessing] = useState("");
   const [clientSecret, setClientSecret] = useState(true);
 
   useEffect(() => {
@@ -33,6 +33,8 @@ function Payment() {
     getClientSecret();
   }, [basket])
 
+  console.log('The Secret is >>>', clientSecret);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
@@ -42,9 +44,14 @@ function Payment() {
         card: elements.getElement(CardElement)
       }
     }).then(({ paymentIntent }) => {
+
       setSucceeded(true);
       setError(null);
       setProcessing(false);
+
+      dispatch({
+        type: 'EMPTY_BASKET'
+      })
 
       history.replace('/orders')
     })
