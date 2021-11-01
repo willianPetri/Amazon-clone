@@ -1,7 +1,5 @@
 import React from 'react';
 import './style.css';
-// import SearchIcon from '@mui/icons-material/Search';
-// import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
 import { auth } from '../../firebase';
@@ -25,8 +23,9 @@ function Header() {
       </Link>
       <div className="header-search">
         <input type="text" className="header-searchInput" />
-        {/* <SearchIcon  className="header-searchIcon" /> */}
-        {/* arrumar o searchIcon do material icon */}
+        <div className="header-searchIcon">
+        🔎
+        </div>
       </div>
 
       <div className="header-nav">
@@ -48,9 +47,9 @@ function Header() {
         </div>
 
         <Link to="/checkout">
-          <div className="header-optionBasket">
-            {/* <ShoppingBasketIcon /> */}
-            <span className="header-optionLineTwo header-basketCount">
+          <div className="header-optionBasket">            
+            🛒  
+            <span className="header-optionLineTwo header-basketCount">             
               {basket?.length}
             </span>
           </div>
