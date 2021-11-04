@@ -10,11 +10,11 @@
 
 ## 🚀 Technologies
 
-This project was developed at the Rocketseat GoStack Bootcamp with the following technologies:
+This project was developed at the Clever Programmer with the following technologies:
 
 - [ReactJS](https://reactjs.org)
-- [Firebase](https://www.typescriptlang.org/)
-- [Stripe](https://styled-components.com/)
+- [Firebase](https://firebase.google.com/docs)
+- [Stripe](https://stripe.com/docs/api)
 - [Axios](https://github.com/axios/axios)
 - [Moment](https://momentjs.com)
 - [VS Code](https://code.visualstudio.com/) with [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
